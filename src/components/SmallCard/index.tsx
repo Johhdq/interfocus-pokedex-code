@@ -20,5 +20,6 @@ function SmallCard() {
     );
 }
 
+//asdasdasd
 // Teste
 export default SmallCard;
