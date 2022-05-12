@@ -20,4 +20,5 @@ function SmallCard() {
     );
 }
 
+// Teste
 export default SmallCard;
