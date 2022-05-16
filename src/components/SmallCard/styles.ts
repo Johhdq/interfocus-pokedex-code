@@ -8,11 +8,10 @@ interface Props{
 export const Container = styled.TouchableOpacity<Props>`
     width: 104px;
     height: 112px;
-
-    border-radius: 8px;
+    border-radius: 10px;
     border-width: 1px;
     border-color: ${({theme, type}) => theme[type]};
-    margin: 8px 8px 8px 8px;
+    margin: 8px 8px 8px 11.3px;
 `;
 
 export const ConteudoCodigo = styled.View`
