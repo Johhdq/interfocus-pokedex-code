@@ -44,7 +44,6 @@ export default function Home() {
         } as never);
     }
 
-
     function alteraTipoFiltro() {
         setDecrescente(estadoAnterior => !estadoAnterior);
     }
