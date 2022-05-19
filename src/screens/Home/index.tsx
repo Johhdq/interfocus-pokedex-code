@@ -76,6 +76,7 @@ export default function Home() {
         // Sempre vai querer trazer os pokemons quando for renderizar essa tela de home
         // Pode colocar outras coisas dentro do UseEffect, outras funcionalidades
         // Pode ser montado mais de um UseEffect, caso um não afete o outro 
+        console.log("Home");
         getPokemons();
     }, [decrescente]); 
     

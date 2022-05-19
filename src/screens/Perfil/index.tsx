@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "react-native";
-import { useAuth } from "../../rooks/auth";
+import { useAuth } from "../../hooks/auth";
 import { BackgroundImage, BotaoSair, Container, Conteudo, Header, Sair, Titulo } from "./styles";
 
 function Perfil() {
@@ -26,7 +26,7 @@ function Perfil() {
                         }} 
                     />
                 </BackgroundImage>
-                <Titulo>{usuario}</Titulo>
+                <Titulo>{usuario?.usuarioNome}</Titulo>
                 <BotaoSair
                     onPress={logoff}
                 >

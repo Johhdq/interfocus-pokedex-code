@@ -4,10 +4,8 @@ import theme from './src/theme';
 import { useFonts } from 'expo-font';
 import { Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { View } from 'react-native';
-import Home from './src/screens/Home';
-import Detalhes from './src/screens/Detalhes';
 import Routes from './src/routes';
-import { AuthProvider } from './src/rooks/auth';
+import { AuthProvider } from './src/hooks/auth';
 
 export default function App() {
 

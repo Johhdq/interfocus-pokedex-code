@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../screens/Home";
 import Detalhes from "../screens/Detalhes";
 import Perfil from "../screens/Perfil";
-import Login from "../screens/Login";
 import Favoritos from "../screens/Favoritos";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useTheme } from "styled-components";
