@@ -17,7 +17,7 @@ const CLIENT_ID = '3f3f15d0-7231-4407-ac94-391e7fa33b2b';
 // Para retornar um code para a gente
 const RESPONSE_TYPE = 'code';
 // Para qual aplicação vai redirecionar após fazer o login
-const REDIRECT_URI = 'exp://192.168.11.3:19000';
+const REDIRECT_URI = 'exp://192.168.10.152:19000';
 // Para setar dados no async storage vai precisar de uma key
 // Não tem um nome específico para dar para a chave mas no caso foi dado este nome '@pokedex:usuario'
 const USUARIO_KEY_STORAGE = '@pokedex:usuario';

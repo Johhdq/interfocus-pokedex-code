@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import FavoriteCard from "../../components/FavoriteCard";
 import { FavoritoDTO } from "../../dtos/FavoritoDTO";
+import { useFavorite } from "../../hooks/useFavorite";
 
 import {
     Container,
@@ -11,33 +12,14 @@ import {
     Titulo,
 } from './styles';
 
-const FAVORITOS_KEY = '@pokedex:favoritos';
-
 function Favoritos(){
-    const [favoritos, setFavoritos] = useState<FavoritoDTO[]>([]);
     
     const isFocused = useIsFocused();
+    const { removeStorage, favoritos, getFavoritos } = useFavorite();
 
-    async function getFavoritos(){
-        const favoritosStorage = await AsyncStorage.getItem(FAVORITOS_KEY);
-        if(favoritosStorage){
-            const favoritosParse = JSON.parse(favoritosStorage) as FavoritoDTO[];
-            setFavoritos(favoritosParse);
-        } 
-    }
-
-    async function removeStorage(id: number){
-        const favoritos = await AsyncStorage.getItem(FAVORITOS_KEY);        
-        if(favoritos){
-            const favoritosParse = JSON.parse(favoritos) as FavoritoDTO[];
-            const filtrados = favoritosParse.filter(f => f.pokemon.id !== id);
-            await AsyncStorage.setItem(FAVORITOS_KEY, JSON.stringify(filtrados));
-            getFavoritos();
-        }
-    }
-    
+    // A use effect vai ser executada sempre quando se entra na tela
     useEffect(() => {
-        console.log('bateu efeito')
+        console.log('bateu efeito');
         getFavoritos();
     }, [isFocused]);
 
