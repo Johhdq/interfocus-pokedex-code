@@ -35,7 +35,7 @@ function FavoriteCard({pokemon, funcaoRemover} : FavoriteCardProps){
     return (
         <Container>
             <ConteudoSvg>
-                {retornaSvg(pokemon.name, 95, 97)}
+                {retornaSvg(pokemon.name, 115, 98)}
             </ConteudoSvg>
             <ConteudoTexto>
                 <Descricao>

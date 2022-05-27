@@ -15,9 +15,10 @@ export const Header = styled.View`
 `;
 
 export const Titulo = styled.Text`
-    font-size:  16px;
-    color: ${({theme}) => theme.primary};
-    font-family: ${({theme}) => theme.fonts.BOLD};
+    font-size: 18px;
+    padding-right: 100px;
+    font-family: ${({theme}) => theme.fonts.BOLD };
+    color: ${({theme}) => theme.primary };
 `;
 
 export const Conteudo = styled.View`

@@ -14,26 +14,25 @@ interface AboutDataProps {
 function AboutData({weight, height, moves}: AboutDataProps) {
     return (
         <Container>
-            <Dados>
+            <Dados naoExibirBorda={false}>
                 <Medidas>
                     <Peso width={16} height={16} style={{marginRight: 8}}/>
                     <Valor>0,15</Valor>
                 </Medidas>
                 <Nome>Height</Nome>
             </Dados>
-            <Dados>
+            <Dados naoExibirBorda={false}>
                 <Medidas>
                     <Altura width={8} height={16} style={{marginRight: 8}}/>
                     <Valor>0,15</Valor>
                 </Medidas>
                 <Nome>Height</Nome>
             </Dados>
-            <Dados>
+            <Dados naoExibirBorda={true}>
                 <Acoes>
                     {moves.map(m => (
                         <Valor key={m.id}>{m.name}</Valor>
                     ))}
-                    <Valor>TESTE</Valor>
                 </Acoes>
                 <Nome>Moves</Nome>
             </Dados>

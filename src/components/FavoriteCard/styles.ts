@@ -6,26 +6,27 @@ interface Props {
 }
 
 export const Container = styled.View`
-    width: 100%;
+    width: 92%;
     flex-direction: row;
     background-color: ${({theme}) => theme.white };
     border-radius: 8px;
+    padding-top: 5px;
     align-items: center;
-    margin-bottom: 41px;
+    margin-bottom: 37px;
     justify-content: space-between;
-    elevation: 4;
-    shadow-color: ${({theme}) => theme.dark_gray };
+    elevation: 8;
+    /* shadow-color: ${({theme}) => theme.dark_gray };
     shadow-offset: 8px 4px;
     shadow-opacity: 0.25;
-    shadow-radius: 4px;
+    shadow-radius: 4px; */
+    margin-left: 23px;    
 `;
 
 export const ConteudoSvg = styled.View`
-    margin-left: -24px;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
+    margin-left: -36px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;  
 `;
 
 export const ConteudoTexto = styled.View`
@@ -58,6 +59,7 @@ export const Tipos = styled.View`
 export const Opcao = styled.View`
     align-items: center;
     justify-content: center;
+    margin-top: -22px;
 `;
 
 export const Botao = styled.TouchableOpacity`
@@ -65,4 +67,5 @@ export const Botao = styled.TouchableOpacity`
     height: 40px;
     align-items: flex-start;
     justify-content: flex-start;
+    
 `;

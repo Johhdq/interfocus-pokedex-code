@@ -55,7 +55,7 @@ export const Conteudo = styled.View`
     background-color: ${({theme}) => theme.white };
     border-radius: 8px;
     padding: 0 20px;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
     align-items: center;
 `;
 

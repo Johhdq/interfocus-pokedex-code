@@ -3,7 +3,6 @@ import { FavoritoDTO } from "../dtos/FavoritoDTO";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { PokemonDTO } from "../dtos/PokemonDTO";
 import { useAuth } from "./auth";
-import { useIsFocused } from "@react-navigation/native";
 import { FavoriteContext } from "../context/FavoriteContext";
 
 interface FavoriteProviderProps {

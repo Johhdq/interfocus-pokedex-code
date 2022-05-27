@@ -7,7 +7,7 @@ function SplashScreen() {
     return (
         <Container>
             <LottieView
-                style={{width: "30%"}} 
+                style={{width: "23%"}} 
                 source={require("../../assets/animations/pokeball-load.json")} 
                 autoPlay
                 loop

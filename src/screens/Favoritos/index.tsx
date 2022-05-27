@@ -1,12 +1,13 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useIsFocused } from "@react-navigation/native";
+import { Feather } from "@expo/vector-icons";
+import { useIsFocused, useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import { FlatList } from "react-native";
+import { useTheme } from "styled-components";
 import FavoriteCard from "../../components/FavoriteCard";
-import { FavoritoDTO } from "../../dtos/FavoritoDTO";
 import { useFavorite } from "../../hooks/useFavorite";
 
 import {
+    BotaoHeader,
     Container,
     Header,
     Titulo,
@@ -16,6 +17,13 @@ function Favoritos(){
     
     const isFocused = useIsFocused();
     const { removeStorage, favoritos, getFavoritos } = useFavorite();
+    const tema = useTheme();
+
+    const navigation = useNavigation();
+
+    function voltar() {
+        navigation.goBack();
+    }
 
     // A use effect vai ser executada sempre quando se entra na tela
     useEffect(() => {
@@ -26,9 +34,17 @@ function Favoritos(){
     return (
         <Container>
             <Header>
+                <BotaoHeader
+                    onPress={() => voltar()}
+                >
+                    <Feather 
+                        name="arrow-left" 
+                        size={18} 
+                        color={tema.dark_gray} 
+                    /> 
+                </BotaoHeader>
                 <Titulo>Favoritos</Titulo>
             </Header>
-
             <FlatList
                 data={favoritos}
                 keyExtractor={(item) => item.id.toString()}
@@ -43,7 +59,9 @@ function Favoritos(){
                     paddingTop: 33,
                     paddingRight: 0,
                     paddingBottom: 0,
-                    paddingLeft: 24
+                    paddingLeft: 20,
+                    marginLeft: -5,
+                    marginBottom: 5             
                 }}
             />
         </Container>

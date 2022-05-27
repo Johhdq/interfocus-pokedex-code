@@ -10,9 +10,15 @@ function Perfil() {
     return (
         <Container>
             <Header>
-                <Titulo>Perfil</Titulo>
+                <Titulo style={{
+                    padding: 10,
+                    paddingLeft: 5
+                }}
+                    
+                >
+                    Perfil
+                </Titulo>
             </Header>
-
             <Conteudo>
                 <BackgroundImage>
                     <Image 
@@ -26,7 +32,12 @@ function Perfil() {
                         }} 
                     />
                 </BackgroundImage>
-                <Titulo>{usuario?.usuarioNome}</Titulo>
+                <Titulo style = {{
+                    paddingLeft: 105 
+                }}
+                >
+                    {usuario?.usuarioNome}
+                </Titulo>
                 <BotaoSair
                     onPress={logoff}
                 >

@@ -9,17 +9,12 @@ import { useTheme } from "styled-components/native";
 import TypeCard from "../../components/TypeCard";
 import AboutData from "../../components/AboutData";
 import BaseStats from "../../components/BaseStats";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { FavoritoDTO } from "../../dtos/FavoritoDTO";
-import { useAuth } from "../../hooks/auth";
 import { useFavorite } from "../../hooks/useFavorite";
 
 // Interface só para tipar os parâmetros que podem ser mandados nessa rota
 interface ParametrosRota {
     pokemon: PokemonDTO;
 }
-
-const FAVORITOS_KEY = "@pokedex:favoritos";
 
 // É o componente
 function Detalhes() {
@@ -82,7 +77,7 @@ function Detalhes() {
                         !estado ? <MaterialCommunityIcons name="heart" size={22} color={tema.white} />
                             : <Feather name="heart" size={22} color={tema.background}  />
                     }
-                </BotaoHeader>           
+                </BotaoHeader>       
             </Header>
             <Conteudo>
                 <ConteudoSvg>
@@ -110,7 +105,7 @@ function Detalhes() {
                 <LabelDestaque
                     type={pokemon.types[0].name}
                 >
-                    Base Statas
+                    Base Stats
                 </LabelDestaque>
                 <BaseStats 
                     pokemonType={pokemon.types[0].name}

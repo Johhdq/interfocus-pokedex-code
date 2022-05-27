@@ -8,7 +8,6 @@ interface SmallCardProps extends TouchableOpacityProps {
     pokemon: PokemonDTO
 };
 
-
 export function SmallCard({pokemon, ...rest}: SmallCardProps) {
     return (
         <Container
